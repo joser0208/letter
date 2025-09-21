@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Flores Amarillas — 21 de setiembre</title>
+<style>
+  :root{
+    --bg:#0f0b18;
+    --card:#12121a;
+    --panel-grad-start:#0b0a13;
+    --panel-grad-end:#16121c;
+    --petal-1:#ffb000;
+    --petal-2:#ffd000;
+    --petal-3:#ffdb00;
+    --center:#4b2e18;
+    --leaf:#275b2f;
+    --stem:#2e5b33;
+    --accent:#ffe66d;
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: radial-gradient(ellipse at center, #161023 0%, #07040b 70%), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="%2315003a"/><stop offset="1" stop-color="%23002116"/></linearGradient></defs><rect width="100%" height="100%" fill="none"/></svg>') no-repeat center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    -webkit-font-smoothing:antialiased;
+    color:#f1eefc;
+  }
+
+  .card{
+    width:100%;
+    max-width:720px;
+    border-radius:18px;
+    background: linear-gradient(180deg,var(--panel-grad-start),var(--panel-grad-end));
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    padding:28px;
+    overflow:hidden;
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:14px;
+    gap:12px;
+  }
+  .header .title{
+    font-weight:700;
+    letter-spacing:0.6px;
+    color:var(--accent);
+    font-size:18px;
+  }
+  .date{
+    font-size:13px;
+    opacity:0.8;
+  }
+
+  .scene{
+    background: linear-gradient(180deg,#0b0b14 0%, #13121a 100%);
+    border-radius:12px;
+    padding:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+
+  /* little stars */
+  .scene::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image: radial-gradient(circle at 20% 25%, rgba(255,255,255,0.06) 0 1px, transparent 1px),
+                      radial-gradient(circle at 80% 10%, rgba(255,255,255,0.04) 0 1px, transparent 1px),
+                      radial-gradient(circle at 40% 70%, rgba(255,255,255,0.03) 0 1px, transparent 1px);
+    background-size: 100% 100%;
+    pointer-events:none;
+  }
+
+  .caption{
+    text-align:center;
+    margin-top:14px;
+    font-size:15px;
+    color:#ffeaa3;
+    font-weight:600;
+  }
+
+  /* SVG container sizing */
+  .flowers-svg {
+    width:100%;
+    height:380px;
+    max-height:460px;
+  }
+
+  /* footer with hint */
+  .footer{
+    margin-top:16px;
+    font-size:13px;
+    color: #cfc9e8;
+    opacity:0.95;
+  }
+
+  /* small responsive tweak */
+  @media (max-width:420px){
+    .flowers-svg{ height:300px; }
+    .card{ padding:16px; border-radius:14px;}
+    .header .title{ font-size:16px;}
+  }
+</style>
+</head>
+<body>
+  <div class="card" role="main">
+    <div class="header">
+      <div class="title">Para ti — Te Amo 🌻</div>
+      <div class="date">21 de setiembre</div>
+    </div>
+
+    <div class="scene" aria-hidden="false">
+      <!-- SVG: ramo de flores amarillas (vector, escalable) -->
+      <svg class="flowers-svg" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ramo de flores amarillas">
+        <defs>
+          <radialGradient id="petalGrad" cx="30%" cy="35%">
+            <stop offset="0%" stop-color="#fff1a8"/>
+            <stop offset="45%" stop-color="#ffd000"/>
+            <stop offset="100%" stop-color="#ffb000"/>
+          </radialGradient>
+          <linearGradient id="leafGrad" x1="0" x2="1">
+            <stop offset="0%" stop-color="#2a6b3a"/>
+            <stop offset="100%" stop-color="#1f4c2a"/>
+          </linearGradient>
+          <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2.2" result="b"/>
+            <feBlend in="SourceGraphic" in2="b"/>
+          </filter>
+        </defs>
+
+        <!-- background subtle vignette -->
+        <rect x="0" y="0" width="900" height="600" rx="20" fill="url(#)" opacity="0"/>
+
+        <!-- stems group -->
+        <g id="stems" transform="translate(160,120)" stroke="none" fill="none">
+          <!-- stems -->
+          <path d="M320 320 C310 260 300 260 300 100" stroke="#2e5b33" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <path d="M240 370 C230 300 220 280 210 140" stroke="#2e5b33" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <path d="M380 360 C380 290 420 260 430 140" stroke="#2e5b33" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <path d="M200 420 C190 340 160 320 150 220" stroke="#2e5b33" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <path d="M420 410 C410 340 460 300 480 180" stroke="#2e5b33" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <path d="M280 380 C270 320 250 300 260 200" stroke="#2e5b33" stroke-width="12" stroke-linecap="round" fill="none"/>
+        </g>
+
+        <!-- leaves -->
+        <g id="leaves" transform="translate(100,160)">
+          <path d="M160 360 C120 320 40 300 0 260 C60 290 120 320 160 360 Z" fill="url(#leafGrad)" opacity="0.95"/>
+          <path d="M480 340 C520 300 560 260 620 240 C560 280 520 320 480 340 Z" fill="url(#leafGrad)" opacity="0.95"/>
+          <path d="M200 420 C170 390 120 380 80 360 C120 390 160 410 200 420 Z" fill="url(#leafGrad)" opacity="0.9"/>
+        </g>
+
+        <!-- flowers: we create several using a symbol -->
+        <symbol id="sunflower" viewBox="-100 -100 200 200">
+          <!-- petals -->
+          <g id="petals">
+            <!-- create 16 petals rotated -->
+            <g fill="url(#petalGrad)">
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z"/>
+            </g>
+            <!-- rotate copies -->
+            <!-- We'll use CSS transform-like rotations by repeating paths with rotations applied by <use> -->
+          </g>
+
+          <!-- center -->
+          <circle cx="0" cy="0" r="28" fill="#3c2616"/>
+          <circle cx="0" cy="0" r="16" fill="#6b4226" opacity="0.9"/>
+          <g fill="#2b190f" opacity="0.28">
+            <circle cx="-4" cy="-2" r="2.2"/>
+            <circle cx="5" cy="6" r="2.5"/>
+            <circle cx="-6" cy="6" r="1.8"/>
+            <circle cx="8" cy="-4" r="2"/>
+          </g>
+        </symbol>
+
+        <!-- place multiple rotated petal groups by drawing petals rotated -->
+        <!-- Instead of copying the petal path 16 times with rotations, use a group with transform -->
+        <g transform="translate(280,150) scale(1.15)" filter="url(#soft)">
+          <!-- petals by rotation -->
+          <g fill="url(#petalGrad)">
+            <g>
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z" transform="rotate(0)"/>
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z" transform="rotate(22.5)"/>
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z" transform="rotate(45)"/>
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z" transform="rotate(67.5)"/>
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z" transform="rotate(90)"/>
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z" transform="rotate(112.5)"/>
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z" transform="rotate(135)"/>
+              <path d="M0,-12 C-32,-60 -62,-82 -36,-20 C-14,18 -8,26 0,26 C8,26 14,18 36,-20 C62,-82 32,-60 0,-12 Z" transform="rotate(157.5)"/>
+            </g>
+          </g>
+          <!-- center circles -->
+          <circle cx="0" cy="0" r="38" fill="#3f2916"/>
+          <circle cx="0" cy="0" r="22" fill="#6d4528"/>
+        </g>
+
+        <!-- other flowers (duplicates with different positions) -->
+        <g transform="translate(420,90) scale(0.9)" filter="url(#soft)">
+          <use href="#sunflower" />
+        </g>
+
+        <g transform="translate(210,60) scale(0.95)" filter="url(#soft)">
+          <use href="#sunflower" />
+        </g>
+
+        <g transform="translate(330,40) scale(0.9)" filter="url(#soft)">
+          <use href="#sunflower" />
+        </g>
+
+        <g transform="translate(500,160) scale(1.05)" filter="url(#soft)">
+          <use href="#sunflower" />
+        </g>
+
+        <g transform="translate(160,200) scale(0.85)" filter="url(#soft)">
+          <use href="#sunflower" />
+        </g>
+
+        <g transform="translate(380,200) scale(0.88)" filter="url(#soft)">
+          <use href="#sunflower" />
+        </g>
+
+        <!-- small glow dots -->
+        <g fill="#fff" opacity="0.06">
+          <circle cx="100" cy="40" r="2"/>
+          <circle cx="50" cy="120" r="1.6"/>
+          <circle cx="780" cy="80" r="1.8"/>
+          <circle cx="720" cy="230" r="1.2"/>
+        </g>
+
+        <!-- subtle ground shadow -->
+        <ellipse cx="360" cy="450" rx="160" ry="24" fill="rgba(0,0,0,0.45)"/>
+      </svg>
+    </div>
+
+    <div class="caption">Un ramo amarillo para iluminar tu día.</div>
+
+    <div class="footer">
+      <strong>Instrucciones para enviar por WhatsApp:</strong>
+      <ol>
+        <li>Guarda este código en un archivo llamado <code>flores_21_septiembre.html</code>.</li>
+        <li>Desde tu teléfono: en WhatsApp, elige ✉️ <em>Adjuntar</em> → <em>Documento</em> y selecciona el archivo .html (si no aparece, envíalo desde la computadora como documento).</li>
+        <li>La otra persona podrá abrirlo en su navegador móvil para ver el ramo interactivo.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
